@@ -1,14 +1,55 @@
 @media screen and (max-width:700px) {
-    header .container {
+
+  body {
+    margin: 0 !important;
+  }
+
+  .sidenav {
+    position: unset;
+    flex-direction: row;
+  }
+
+  .item-ativo {
+    border-right: unset;
+    border-bottom: 8px solid var(--vermelho);
+    border-radius: 4px 4px 0 0px !important;
+  }
+
+  .sidenav .side-item:hover {
+    background-color: unset;
+    color: unset;
+  }
+
+  .sidenav .side-item {
+    margin: 0;
+  }
+
+  .logo {
+    position: unset;
+  }
+
+  .filme-principal {
+    height: 400px;
+  }
+
+  header .container {
     display: flex;
     flex-direction: column;
-    }
+    margin-bottom: 16px;
+  }
 
-    .botao {
-        margin-top: 5px;
-        width: 300px;
-    }
+  .botoes {
+    display: inline-flex;
+  }
 
+  .botao {
+    margin-top: 5px;
+    width: 150px !important;
+  }
+
+  .item .titulo-filme {
+    height: 40px !important;
+  }
 }
 
 @media screen and (min-width:1000px) {

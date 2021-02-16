@@ -1,115 +1,170 @@
 :root {
-    --vermelho:#E50914;
-    --preto:#141414;
+  --vermelho:#E50914;
+  --preto:#141414;
+  --branco: #FFFFFF;
+  --cinza: #AAAAAA;
 }
 
 * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
 body {
-   background: var(--preto);
-   font-family: 'Arial', Times, serif;
-   color:white;
+  background: var(--preto);
+  font-family: 'Arial', Times, serif;
+  color:var(--branco);
+  margin-left: 62px;
 }
-
 
 header .container {
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-header .logo {
-    margin-left: 5px;
-    color: var(--vermelho);
-    font-family: 'Arial Black', Times;
-    font-size:40px;
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--preto);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  align-items: center;
+}
+
+.sidenav .side-item {
+  padding: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+}
+
+.item-ativo {
+  border-right: 8px solid var(--vermelho);
+}
+
+.sidenav .side-item:hover {
+  background-color: var(--branco);
+  color: var(--preto);
+  transition: .3s;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  margin: 10px 0 0 20px;
+  color: var(--vermelho);
+  font-family: 'Arial Black', Times;
+  font-size: 26px;
 }
 
 header nav a {
-    text-decoration:none;
-    color:#AAA;
-    margin-right: 10px;
+  text-decoration:none;
+  color:var(--cinza);
+  margin-right: 10px;
 }
 
 header nav a:hover {
-    color:#fff;
+  color:#fff;
+}
+
+.item {
+  position: relative;
+}
+
+.titulo-filme {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.60);
+  color: var(--branco);
+  width: 100%;
+  height: 0;
+  transition: .4s;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.titulo-filme span {
+  margin: 0 auto;
+  line-height: 40px;
+  padding-left: 16px;
+}
+
+.item:hover .titulo-filme {
+  height: 40px !important;
 }
 
 .filme-principal {
-    font-size:16px;
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('/img/poster.jpg');
-    height:400px;
-    background-size:cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  font-size:16px;
+  background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('/img/poster.jpg');
+  background-position: top;
+  height: 500px;
+  background-size:cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-
 .filme-principal .descricao {
-    margin-top: 10px;
-    margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .filme-principal .titulo {
-    margin-top: 15%;
-    font-size: 40px;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
+  margin-top: 25%;
+  font-size: 40px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
 .botao {
-    cursor: pointer;
-    background-color: rgba(0,0,0,.50);
-    border:none;
-    color: white;
-    padding:15px 30px;
-    margin-right: 15px;
-    font-size: 12px;
-    transition: .3s ease all;
+  cursor: pointer;
+  background-color: rgba(0,0,0,.50);
+  border: none;
+  color: var(--branco);
+  padding:15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  transition: .3s ease all;
+  border-radius: 4px;
+}
+
+.subtitulo {
+  color: var(--cinza);
+  margin: 20px 0 10px 20px;
 }
 
 .botao:hover {
-    background-color:white;
-    color:black;
+  background-color:var(--branco);
+  color:black;
 }
 
 .botao i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .box-filme {
-    height: 100%;
-    width: 100%;
-    display: block;
-    cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: block;
+  cursor: pointer;
 }
 
 .carrosel-filmes {
-    margin-top:5px;
+  margin-top:5px;
 }
 
 .container {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .filme-principal .container {
-    width: 70%;
+  width: 70%;
 }
-
-
-
-
-
-
-
-
-
-
-
