@@ -1,40 +1,61 @@
 let filmes = [
   {
     img: 'img/mini1.jpg',
-    titulo: 'Poster de Aves de rapina'
+    descricaoFoto: 'Poster de Aves de rapina',
+    titulo: 'Aves de rapina'
   },  {
     img: 'img/mini2.jpg',
-    titulo: 'Poster de Fate a saga winx'
+    descricaoFoto: 'Poster de Fate a saga winx',
+    titulo: 'Fate: a saga winx'
   }, {
     img: 'img/mini3.jpg',
-    titulo: 'Poster de Tenet'
+    descricaoFoto: 'Poster de Tenet',
+    titulo: 'Tenet'
   }, {
     img: 'img/mini4.jpg',
-    titulo: 'Poster de Coringa'
+    descricaoFoto: 'Poster de Coringa',
+    titulo: 'Coringa'
   }, {
     img: 'img/mini5.jpg',
-    titulo: 'Poster de The good doctor'
+    descricaoFoto: 'Poster de The good doctor',
+    titulo: 'The good doctor'
   }, {
     img: 'img/mini6.jpg',
-    titulo: 'Poster de Wandavision'
+    descricaoFoto: 'Poster de Wandavision',
+    titulo: 'Wandavision'
   }, {
     img: 'img/mini7.jpg',
-    titulo: 'Poster de O expresso do amanhã'
+    descricaoFoto: 'Poster de O expresso do amanhã',
+    titulo: 'O expresso do amanhã'
   }, {
     img: 'img/mini8.jpg',
-    titulo: 'Poster de Abaixo de zero'
+    descricaoFoto: 'Poster de Abaixo de zero',
+    titulo: 'Abaixo de zero'
   }, {
     img: 'img/mini9.jpg',
-    titulo: 'Poster de Host'
+    descricaoFoto: 'Poster de Host',
+    titulo: 'Host'
   }, {
     img: 'img/mini10.jpg',
-    titulo: 'Poster de Soul'
+    descricaoFoto: 'Poster de Soul',
+    titulo: 'Soul'
   }
 ]
 
 let trendingCarousel = document.getElementById('trending');
 filmes.forEach(filme => {
   trendingCarousel.innerHTML += `<div class="item">
-                                    <img class="box-filme" src="${filme.img}" alt="${filme.titulo}">
+                                    <img class="box-filme" src="${filme.img}" alt="${filme.descricaoFoto}">
+                                    <div class="titulo-filme">
+                                      <span>${filme.titulo}</span>
+                                    </div>
                                   </div> `
 });
+
+function assistirFilme() {
+  window.open('https://www.netflix.com/br/title/80217517');
+}
+
+function verDetalhes() {
+  window.open('https://www.themoviedb.org/tv/110529-cidade-invisivel?language=pt-BR');
+}
